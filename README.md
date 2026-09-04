@@ -172,7 +172,3 @@ docs/screenshots/    Screenshots from the real demo
 docs/demo/           MP4, captions and recording notes
 models/              Local runtime artifacts; excluded from Git
 ```
-
-## Development and provenance
-
-AI coding assistance contributed to implementation, debugging and documentation. Reported metrics come from the preserved experiments, and limitations are documented rather than replaced with invented results. The project should be presented in accordance with the course's assistance and attribution requirements.
