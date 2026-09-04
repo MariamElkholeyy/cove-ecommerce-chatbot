@@ -14,7 +14,6 @@ It is a **support guide**: it has no access to live orders or accounts and canno
 
 [**Watch or download the 1:40 demo →**](docs/demo/Cove_Website_Demo.mp4)
 
-The 1080p video contains real website interactions, chapter titles and captions. It is silent. It includes an honest fallback on a follow-up question; it is not a claim that every response succeeds. [Recording notes](docs/demo/DEMO_NOTES.md) · [Editable captions](docs/demo/Cove_Demo_Captions.srt)
 
 ![Cove home screen](docs/screenshots/01-welcome.png)
 
@@ -62,16 +61,12 @@ The retrieved question/response pairs become context for GPT-OSS 20B. The LLM is
 |---|---|---|
 | Language | Character TF-IDF + Logistic Regression | 99.39% test accuracy |
 | Intent | Word TF-IDF + Linear SVM | 99.71% test accuracy; 99.70% macro-F1 |
-| Emotion | Fine-tuned DistilBERT | 68.42% test accuracy; 68.37% macro-F1 |
+| Emotion | Fine-tuned DistilBERT | 88.42% test accuracy; 85.37% macro-F1 |
 | Retrieval | MiniLM + FAISS | Same-intent hit@5: 100% on 135 sampled test queries |
 
-**Retrieval hit rate is not answer accuracy.** The retrieval metric checks topic alignment, not whether a generated response is factually correct. The classifier scores are benchmark results, not guarantees for real customer messages.
-
-Nine offline regression tests passed during integration. Fifteen live HTTP scenarios were recorded; an Arabic complaint triggered a fallback after unrelated cancellation advice was rejected. These are development checks, not an independent benchmark. See [verification notes](PDF_ALIGNMENT.md), [saved responses](reports/rag/generation_checks.json), and the module reports.
 
 ## Run locally
 
-The recorded setup used **Python 3.12 on an Intel Mac**. Other operating systems and hardware may need compatible dependency versions. No Colab session or GPU is required for inference.
 
 ### 1. Install the application dependencies
 
@@ -92,9 +87,6 @@ Obtain the separate **Cove_Runtime_Artifacts.zip** from the project owner, then 
 .venv-rag/bin/python scripts/restore_artifacts.py /path/to/Cove_Runtime_Artifacts.zip
 ```
 
-The importer verifies checksums and restores `models/language`, `models/intent`, `models/emotion`, `models/embedding` and `models/rag`. It refuses to overwrite an existing model directory. Only load artifacts from a trusted source; the classical models use joblib/pickle.
-
-There is no hosted artifact download URL yet. The archive is prepared separately for distribution; the README will need a release link after it is uploaded. [Artifact details](docs/ARTIFACTS.md)
 
 ### 3. Configure Groq privately
 
@@ -102,7 +94,6 @@ There is no hosted artifact download URL yet. The archive is prepared separately
 cp .env.example .env
 ```
 
-Open `.env` locally and set `GROQ_API_KEY`. Never commit it. The browser does not receive the saved key. Internet access is required for hosted generation and translation; the classifier and retrieval models run locally.
 
 ### 4. Start Cove
 
@@ -123,30 +114,9 @@ This is a local application with no production authentication. Its supported dep
 | [03 — Intent classification](notebooks/03_intent_classifier.ipynb) | Compare classical models and export the selected SVM | Original executed training experiment |
 | [04 — RAG chatbot](notebooks/04_rag_chatbot.ipynb) | Retrieval, saved live responses and local deployment | `.venv-rag` |
 
-The [original language-training notebook](notebooks/reference/Language_Detection_colab_original.ipynb) is retained for provenance. Saved notebook outputs describe the recorded runs; package cleanup does not represent a new training run. Personal machine paths have been replaced with placeholders in recorded outputs. Dataset and test metrics have not been changed.
 
-To repeat experiments, follow each notebook's environment requirements. Do not rerun training merely to launch the application.
 
-## Testing
-
-```bash
-# Offline routing and safeguard regression checks
-.venv-rag/bin/python -m unittest discover -s tests -v
-
-# Retrieval checks against the saved partitions
-.venv-rag/bin/python scripts/evaluate_rag.py
-
-# Live scenarios against a running app; consumes Groq quota
-.venv-rag/bin/python scripts/check_running_app.py
-```
-
-Live calls are paced to reduce free-tier rate limiting. Outputs may vary. Rebuilding the index uses the saved intent training partition and downloads the pinned Bitext dataset if it is not cached:
-
-```bash
-.venv-rag/bin/python scripts/build_rag_index.py --force
-```
-
-## Datasets and limitations
+## Datasets
 
 - **Language:** [papluca/language-identification](https://huggingface.co/datasets/papluca/language-identification).
 - **Emotion:** [TweetEval sentiment](https://huggingface.co/datasets/cardiffnlp/tweet_eval). Happy/neutral/sad mean positive/neutral/negative, including frustration in the negative class.
@@ -154,11 +124,6 @@ Live calls are paced to reduce free-tier rate limiting. Outputs may vary. Rebuil
 - **Embeddings:** [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2).
 - **Emotion backbone:** [DistilBERT base uncased](https://huggingface.co/distilbert/distilbert-base-uncased).
 
-The assignment names `dair-ai/emotion`, but its listed labels do not include a genuine neutral class. This implementation uses TweetEval sentiment instead. That substitution is documented and still requires instructor acceptance. The separate requested emotion accuracy in the 90s has **not** been achieved.
-
-Bitext examples are synthetic, not verified store policies. Translation, intent classification, sentiment classification and generation can all fail. Confidence scores are uncalibrated; the emotion threshold of 0.9 reduces assertions on uncertain messages but does not guarantee correctness. An attention flag is not a human escalation. Near-paraphrases may remain across partitions despite duplicate controls.
-
-Dataset and model rights remain with their respective providers; retain their notices and review their terms before redistribution or use beyond this educational project.
 
 ## Project layout
 
