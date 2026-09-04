@@ -1,0 +1,14 @@
+message,description,language,language_name,candidate,confidence,reason
+Where is my order? I have been waiting for a week.,English,en,English,en,0.7841,accepted
+أريد معرفة موعد وصول طلبي,Arabic,ar,Arabic,ar,0.6739,accepted
+عايزة أعرف الأوردر بتاعي هيوصل امتى,Egyptian Arabic — qualitative only,ar,Arabic,ar,0.8768,accepted
+Je voudrais savoir où se trouve ma commande.,French,fr,French,fr,0.7559,accepted
+¿Dónde está mi pedido?,Spanish,es,Spanish,es,0.3038,accepted
+Wo ist meine Bestellung?,German,de,German,de,0.7449,accepted
+我的订单什么时候到？,Chinese,zh,Chinese,zh,0.7928,accepted
+注文はいつ届きますか？,Japanese,ja,Japanese,ja,0.3778,accepted
+OK,Ambiguous short input,unknown,Uncertain,,,too_short_or_no_letters
+12345,No language evidence,unknown,Uncertain,,,too_short_or_no_letters
+,Empty input,unknown,Uncertain,,,too_short_or_no_letters
+عايزة track my order,Mixed language — no single gold label,en,English,en,0.2919,accepted
+ana 3ayza el order,Arabizi — outside validated coverage,tr,Turkish,tr,0.1412,accepted

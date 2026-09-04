@@ -1,0 +1,13 @@
+text,expected_behavior,intent,candidate_intent,route,margin,needs_review,priority,reason
+Hello!,greeting,greeting,,greeting,,False,False,standalone_social_rule
+Thank you!,gratitude,gratitude,,gratitude,,False,False,standalone_social_rule
+Bye for now.,goodbye,goodbye,,goodbye,,False,False,standalone_social_rule
+"Hi, where is my order?",track_order,track_order,track_order,order_status,0.07915237781486961,False,False,model_prediction
+I am furious. Where is my order?,track_order,track_order,track_order,order_status,0.07672711019248313,False,False,model_prediction
+Please cancel my purchase.,cancel_order,cancel_order,cancel_order,order_management,0.4777776422336313,False,False,model_prediction
+Can you check whether my refund has arrived?,track_refund,track_refund,track_refund,billing_and_refunds,1.0315728230917771,False,False,model_prediction
+I forgot my password.,recover_password,recover_password,recover_password,account_management,1.61119499484755,False,False,model_prediction
+Please connect me to a human.,contact_human_agent,contact_human_agent,contact_human_agent,human_handoff,0.6981170346002903,False,True,model_prediction
+wher is my pakage,track_order,delivery_period,delivery_period,order_status,0.20196383687102604,False,False,model_prediction
+Give me a chocolate cake recipe.,out_of_scope (desired; not trained),place_order,place_order,order_management,0.019911453254756073,False,False,model_prediction
+Cancel my order and delete my account.,multiple requests; needs clarification desired,delete_account,delete_account,account_management,1.5254446836595081,False,False,model_prediction

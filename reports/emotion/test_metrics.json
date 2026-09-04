@@ -1,0 +1,8 @@
+{
+  "accuracy": 0.6842062393092775,
+  "macro_f1": 0.6837237431589469,
+  "test_examples": 12277,
+  "accepted_examples": 4996,
+  "coverage": 0.40693980614156555,
+  "accepted_accuracy": 0.828462770216173
+}

@@ -1,0 +1,19 @@
+{
+  "model/config.json": "f2fde265b83a60974923250c40a5a8184a9e4f7cf53dd1889a339f1ec56ba71f",
+  "model/metadata.json": "d0859827e022717dfa5bd2967a94b79ea90b1c78cba8b161cc1fe3c875f14d19",
+  "model/model.safetensors": "a9d4bcd21982f100a7a95923f42b15a23d9e416ec228d51dc0df0dbcdc29aff4",
+  "model/special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+  "model/tokenizer.json": "2fc687b11de0bc1b3d8348f92e3b49ef1089a621506c7661fbf3248fcd54947e",
+  "model/tokenizer_config.json": "a3c9410f27554c6e26af779fd147e536c6c5f9e5cb0e6b8f38ddaa25e1b0f6af",
+  "model/vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+  "reports/classification_report.csv": "48b73077b4836cce88f2197f63eb3ef6ac661ae3ffdae39a52c550b430487139",
+  "reports/colab_requirements_snapshot.txt": "b39ec1435aff31e3fd03bd3123b19c1f96ce8140ee34994f028e1708a5262b04",
+  "reports/confusion_matrix.png": "a7206841ee8c51238dc1ad112ce7c506c8c8724348445a669af48b7b213219e3",
+  "reports/learning_curves.png": "7276daf05221d76a00be55ab46990af078db663af207bb01a6dab1164983bc5d",
+  "reports/run_metadata.json": "a6f359886d16952c4c0ce8036643607a651ada4537c716deace2e9596451347c",
+  "reports/support_examples_qualitative.csv": "a8850223683389d285ba94270022ccd0ffbb1a847dbb241878f4af60402c9b8e",
+  "reports/test_errors.csv": "6bf143651e864c8140da2b0913c53d3f9357b6f66444371686c7443c57ca8362",
+  "reports/test_metrics.json": "c199206ccfc1198e12ec1c9f2c58a4d21669bb3356dc97f1ba5877a751fb04b3",
+  "reports/training_history.json": "760f1cf6dc37f44f97d585789969031dccbd829108da5bfa9187e5805d80f58c",
+  "reports/validation_thresholds.csv": "a07124d99c205077297ce12233c70fefed6a994da4ee3ce31276495a3381fc05"
+}

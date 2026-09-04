@@ -1,0 +1,115 @@
+{
+  "model": "user_colab_character_tfidf_logistic_regression",
+  "validation_accuracy": 0.9943,
+  "confidence_threshold": 0.0,
+  "min_letters": 4,
+  "original_test": {
+    "examples": 10000,
+    "accuracy": 0.9939,
+    "macro_f1": 0.9939183822941692,
+    "accepted_examples": 10000,
+    "coverage": 1.0,
+    "accepted_accuracy": 0.9939
+  },
+  "unique_unseen_test": {
+    "examples": 9171,
+    "accuracy": 0.9938937956602334,
+    "macro_f1": 0.9937440245407346,
+    "accepted_examples": 9171,
+    "coverage": 1.0,
+    "accepted_accuracy": 0.9938937956602334
+  },
+  "evaluated_at_utc": "2026-09-03T08:10:19.139808+00:00",
+  "provenance": {
+    "source": "User-provided Colab notebook and fitted model",
+    "original_model": "lang_detection_model.pkl",
+    "model_sha256": "3f41047237b82cac8e5c38ff5c50c809356764b8845a08acbab006783c63322e",
+    "original_notebook": "notebooks/reference/Language_Detection_colab_original.ipynb",
+    "training_sklearn_version": "1.6.1",
+    "training_dataset_revision": "not recorded in original notebook",
+    "original_validation_accuracy": 0.9943,
+    "locally_retrained": false
+  },
+  "evaluation_dataset": {
+    "dataset": "papluca/language-identification",
+    "revision": "aa56583bf2bc52b0565770607d6fc3faebecf9e2",
+    "files": {
+      "train": {
+        "url": "https://huggingface.co/datasets/papluca/language-identification/resolve/aa56583bf2bc52b0565770607d6fc3faebecf9e2/train.csv",
+        "sha256": "f180d78a1f0e758fd33bb1bae37f62eebc538d78ece2affb3d05a967850ba474",
+        "bytes": 11951457
+      },
+      "valid": {
+        "url": "https://huggingface.co/datasets/papluca/language-identification/resolve/aa56583bf2bc52b0565770607d6fc3faebecf9e2/valid.csv",
+        "sha256": "e0de8be0ab02445906efdbdc30bfc30534a6a224a78c21cea4b35e3bb7f5645b",
+        "bytes": 1705420
+      },
+      "test": {
+        "url": "https://huggingface.co/datasets/papluca/language-identification/resolve/aa56583bf2bc52b0565770607d6fc3faebecf9e2/test.csv",
+        "sha256": "cb7dfe272142815573b735b5d555d42d28d0d648187020f2d2eb3eebd772e759",
+        "bytes": 1686134
+      }
+    }
+  },
+  "split_audit": [
+    {
+      "split": "train",
+      "original_rows": 70000,
+      "repeated_text_rows": 1029,
+      "conflicting_label_rows": 11,
+      "overlap_with_earlier_splits": 0,
+      "unique_unseen_nonconflicting_rows": 68967
+    },
+    {
+      "split": "valid",
+      "original_rows": 10000,
+      "repeated_text_rows": 1010,
+      "conflicting_label_rows": 0,
+      "overlap_with_earlier_splits": 132,
+      "unique_unseen_nonconflicting_rows": 8877
+    },
+    {
+      "split": "test",
+      "original_rows": 10000,
+      "repeated_text_rows": 667,
+      "conflicting_label_rows": 0,
+      "overlap_with_earlier_splits": 188,
+      "unique_unseen_nonconflicting_rows": 9171
+    }
+  ],
+  "languages": {
+    "ar": "Arabic",
+    "bg": "Bulgarian",
+    "de": "German",
+    "el": "Greek",
+    "en": "English",
+    "es": "Spanish",
+    "fr": "French",
+    "hi": "Hindi",
+    "it": "Italian",
+    "ja": "Japanese",
+    "nl": "Dutch",
+    "pl": "Polish",
+    "pt": "Portuguese",
+    "ru": "Russian",
+    "sw": "Swahili",
+    "th": "Thai",
+    "tr": "Turkish",
+    "ur": "Urdu",
+    "vi": "Vietnamese",
+    "zh": "Chinese"
+  },
+  "versions": {
+    "scikit-learn": "1.6.1",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "joblib": "1.6.0"
+  },
+  "limitations": [
+    "Original training dataset revision and full environment were not recorded.",
+    "Exact overlap audit does not detect near duplicates.",
+    "Unknown-language handling is heuristic; unsupported languages can be confidently misclassified.",
+    "Short messages, mixed languages, dialects, and Arabizi require separate evaluation.",
+    "Test accuracy is not a guarantee of customer-support accuracy."
+  ]
+}

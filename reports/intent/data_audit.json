@@ -1,0 +1,14 @@
+{
+  "raw_rows": 26872,
+  "retained_rows": 24274,
+  "conflicting_rows": 0,
+  "exact_duplicate_rows": 2598,
+  "split_sizes": {
+    "train": 19430,
+    "validation": 2418,
+    "test": 2426
+  },
+  "template_groups": 23621,
+  "source_url": "https://huggingface.co/datasets/bitext/Bitext-customer-support-llm-chatbot-training-dataset/resolve/fb86d1b60038970d79fefbfa0c28b47c22d8b961/Bitext_Sample_Customer_Support_Training_Dataset_27K_responses-v11.csv",
+  "sha256": "6f81102b0100b97b8468eb04368033a23206bf1fde9d53500d5806ec1001a434"
+}

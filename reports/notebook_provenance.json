@@ -1,0 +1,14 @@
+[
+  {
+    "notebook": "02_emotion_classifier.ipynb",
+    "original_filename": "02_emotion_classifier (2).ipynb",
+    "original_sha256": "90ddd3fab85539a7b873cd0979d38d480595e82bdfe6b97fba7e7b78897ebbfc",
+    "note": "Saved executed Colab notebook imported on 2026-09-04. Existing outputs are the original run, not a new training run. Its test accuracy (0.6842062393), validation macro-F1 (0.7277523386), epoch 3 checkpoint and class-weight power 0.5 match models/emotion/metadata.json. The deployed model is DistilBERT on TweetEval sentiment. TweetEval differs from the PDF dataset: it supplies a genuine neutral class. Happy/neutral/sad mean positive/neutral/negative. Dataset acceptance is a TA decision; no 90% result is claimed."
+  },
+  {
+    "notebook": "03_intent_classifier.ipynb",
+    "original_filename": "03_intent_classifier.ipynb",
+    "original_sha256": "cd82a335c228567e2d9c7558552622d943306714d8993c924284bcec0db14fe6",
+    "note": "Saved executed Colab notebook imported on 2026-09-04. Existing outputs are the original run, not a new training run. Its test accuracy (0.9971145919) and test size (2426) match the imported intent report. Local runtime uses this exported TF-IDF/LinearSVC model."
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "accuracy": 0.9971145919208574,
+  "macro_f1": 0.9970430616961674,
+  "route_accuracy": 0.998351195383347,
+  "test_examples": 2426,
+  "accepted_examples": 2426,
+  "coverage": 1.0,
+  "accepted_accuracy": 0.9971145919208574
+}

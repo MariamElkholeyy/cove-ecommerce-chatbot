@@ -1,0 +1,23 @@
+[
+  {
+    "epoch": 1,
+    "mean_weighted_training_loss": 0.7385618371712535,
+    "seconds": 93.03818230299999,
+    "accuracy": 0.7135,
+    "macro_f1": 0.7009624921685224
+  },
+  {
+    "epoch": 2,
+    "mean_weighted_training_loss": 0.544296764532725,
+    "seconds": 93.7510325180001,
+    "accuracy": 0.734,
+    "macro_f1": 0.7212673514804008
+  },
+  {
+    "epoch": 3,
+    "mean_weighted_training_loss": 0.4316362954650009,
+    "seconds": 94.06018646400003,
+    "accuracy": 0.741,
+    "macro_f1": 0.7277523386182304
+  }
+]

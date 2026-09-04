@@ -1,0 +1,31 @@
+1
+00:00:04,000 --> 00:00:09,000
+A local customer-support chatbot with language, sentiment, intent and RAG.
+
+2
+00:00:09,000 --> 00:00:23,000
+A real tracking question is answered using retrieved support examples.
+
+3
+00:00:23,000 --> 00:00:32,000
+Expandable Bitext references make the retrieved context visible.
+
+4
+00:00:32,000 --> 00:00:46,000
+This follow-up receives an honest fallback when the answer cannot be verified.
+
+5
+00:00:46,000 --> 00:01:01,000
+Negative sentiment changes the tone and adds an attention flag, not an escalation.
+
+6
+00:01:01,000 --> 00:01:16,000
+An Arabic question receives an Arabic answer with supporting references.
+
+7
+00:01:16,000 --> 00:01:25,000
+The chatbot acknowledges feedback without claiming to submit a review.
+
+8
+00:01:25,000 --> 00:01:35,000
+Human support is recommended. No transfer or store action takes place.

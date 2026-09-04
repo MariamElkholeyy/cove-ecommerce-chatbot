@@ -1,0 +1,60 @@
+[
+  {
+    "start": 0,
+    "duration": 4,
+    "title": "Cove — customer support with context"
+  },
+  {
+    "start": 4,
+    "duration": 5,
+    "title": "A calmer support experience",
+    "caption": "A local customer-support chatbot with language, sentiment, intent and RAG."
+  },
+  {
+    "start": 9,
+    "duration": 14,
+    "title": "Ask a support question",
+    "caption": "A real tracking question is answered using retrieved support examples."
+  },
+  {
+    "start": 23,
+    "duration": 9,
+    "title": "See the evidence",
+    "caption": "Expandable Bitext references make the retrieved context visible."
+  },
+  {
+    "start": 32,
+    "duration": 14,
+    "title": "Keep limitations visible",
+    "caption": "This follow-up receives an honest fallback when the answer cannot be verified."
+  },
+  {
+    "start": 46,
+    "duration": 15,
+    "title": "Respond with empathy",
+    "caption": "Negative sentiment changes the tone and adds an attention flag, not an escalation."
+  },
+  {
+    "start": 61,
+    "duration": 15,
+    "title": "Ask in Arabic",
+    "caption": "An Arabic question receives an Arabic answer with supporting references."
+  },
+  {
+    "start": 76,
+    "duration": 9,
+    "title": "Acknowledge positive feedback",
+    "caption": "The chatbot acknowledges feedback without claiming to submit a review."
+  },
+  {
+    "start": 85,
+    "duration": 10,
+    "title": "Be honest about capabilities",
+    "caption": "Human support is recommended. No transfer or store action takes place."
+  },
+  {
+    "start": 95,
+    "duration": 5,
+    "title": "Helpful guidance. Honest limits."
+  }
+]

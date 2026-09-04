@@ -1,0 +1,8 @@
+# Initial local setup; later modules will add their own dependencies.
+ipykernel
+nbclient
+numpy
+pandas
+scikit-learn==1.6.1
+matplotlib
+certifi

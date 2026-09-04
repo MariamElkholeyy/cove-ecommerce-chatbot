@@ -1,0 +1,19 @@
+{
+  "checked_at_utc": "2026-09-04T13:27:53.144470+00:00",
+  "offline_regression_tests": {
+    "passed": 9,
+    "failed": 0
+  },
+  "http_scenarios": 15,
+  "http_errors": [],
+  "guarded_fallbacks": [
+    "arabic_negative"
+  ],
+  "notes": [
+    "Manual development checks, not a chatbot accuracy benchmark.",
+    "Happy feedback and Arabic negative cases were retested after their final targeted fixes. Earlier development iterations are archived separately.",
+    "Arabic negative example was safely refused after draft review found cancellation advice unrelated to the delay complaint.",
+    "No retraining occurred; emotion benchmark remains 68.42%."
+  ],
+  "source_sha256": "e7846f2ceecbb693749691c08fcbba29796eb89c25715929586db7743a9cb338"
+}

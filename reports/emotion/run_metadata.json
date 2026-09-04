@@ -1,0 +1,128 @@
+{
+  "training_status": "full_training_completed",
+  "task": "three_class_customer_sentiment",
+  "label_semantics": {
+    "sad": "negative, including dissatisfaction and frustration",
+    "neutral": "neutral/factual",
+    "happy": "positive/satisfied"
+  },
+  "id2label": {
+    "0": "sad",
+    "1": "neutral",
+    "2": "happy"
+  },
+  "model_id": "distilbert/distilbert-base-uncased",
+  "model_revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+  "dataset": {
+    "dataset": "cardiffnlp/tweet_eval",
+    "subset": "sentiment",
+    "revision": "b3a375baf0f409c77e6bc7aa35102b7b3534f8be",
+    "files": {
+      "train": {
+        "sha256": "884ed7990ba4058aa78372f5f9590db308c393820545d9c4f2363f5a2ea12fbf",
+        "url": "https://huggingface.co/datasets/cardiffnlp/tweet_eval/resolve/b3a375baf0f409c77e6bc7aa35102b7b3534f8be/sentiment/train-00000-of-00001.parquet",
+        "rows": 45615
+      },
+      "validation": {
+        "sha256": "ba8e7513047d4991bcdcc0a22aaa70777e47b609f1b739da5117baf7893f3e56",
+        "url": "https://huggingface.co/datasets/cardiffnlp/tweet_eval/resolve/b3a375baf0f409c77e6bc7aa35102b7b3534f8be/sentiment/validation-00000-of-00001.parquet",
+        "rows": 2000
+      },
+      "test": {
+        "sha256": "f73aea52d43879223019e733b944780f7e9203ee32459ea006f554011379fcdf",
+        "url": "https://huggingface.co/datasets/cardiffnlp/tweet_eval/resolve/b3a375baf0f409c77e6bc7aa35102b7b3534f8be/sentiment/test-00000-of-00001.parquet",
+        "rows": 12284
+      }
+    }
+  },
+  "max_length": 128,
+  "review_confidence_threshold": 0.9,
+  "seed": 42,
+  "epochs": 3,
+  "batch_size": 32,
+  "learning_rate": 2e-05,
+  "checkpoint_selection": {
+    "best_epoch": 3,
+    "best_validation_macro_f1": 0.7277523386182304,
+    "class_weight_power": 0.5,
+    "class_weights": [
+      1.4638019800186157,
+      0.8577179312705994,
+      0.9229177236557007
+    ]
+  },
+  "validation_metrics": {
+    "accuracy": 0.741,
+    "macro_f1": 0.7277523386182304
+  },
+  "test_metrics": {
+    "accuracy": 0.6842062393092775,
+    "macro_f1": 0.6837237431589469,
+    "test_examples": 12277,
+    "accepted_examples": 4996,
+    "coverage": 0.40693980614156555,
+    "accepted_accuracy": 0.828462770216173
+  },
+  "class_counts": {
+    "train": {
+      "1": 20653,
+      "2": 17838,
+      "0": 7091
+    },
+    "validation": {
+      "1": 869,
+      "2": 819,
+      "0": 312
+    },
+    "test": {
+      "1": 5934,
+      "0": 3968,
+      "2": 2375
+    }
+  },
+  "split_audit": [
+    {
+      "split": "train",
+      "original": 45615,
+      "retained": 45582,
+      "conflicting_rows": 6,
+      "within_split_duplicate_rows": 27,
+      "earlier_split_overlap_rows": 0
+    },
+    {
+      "split": "validation",
+      "original": 2000,
+      "retained": 2000,
+      "conflicting_rows": 0,
+      "within_split_duplicate_rows": 0,
+      "earlier_split_overlap_rows": 0
+    },
+    {
+      "split": "test",
+      "original": 12284,
+      "retained": 12277,
+      "conflicting_rows": 7,
+      "within_split_duplicate_rows": 0,
+      "earlier_split_overlap_rows": 0
+    }
+  ],
+  "completed_at_utc": "2026-09-03T09:01:41.216406+00:00",
+  "versions": {
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "pyarrow": "21.0.0",
+    "scikit-learn": "1.6.1",
+    "safetensors": "0.8.0"
+  },
+  "limitations": [
+    "English only; translate other languages before classification.",
+    "Sad is a negative-sentiment display name, not literal sadness.",
+    "Twitter-to-customer-support domain shift.",
+    "Sarcasm, mixed sentiment, short messages and ambiguous requests can be misclassified.",
+    "Confidence values are uncalibrated; the review threshold is validation-derived.",
+    "Exact duplicates removed; near duplicates may remain."
+  ]
+}

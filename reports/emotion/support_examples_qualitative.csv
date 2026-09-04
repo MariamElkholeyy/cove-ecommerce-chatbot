@@ -1,0 +1,11 @@
+text,predicted,confidence,needs_review
+I love the product. Thank you for the excellent service!,happy,0.9908053874969482,False
+My replacement arrived and I am really happy with it.,happy,0.9911072850227356,False
+Where can I download my invoice?,neutral,0.9183740615844727,False
+Please update my delivery address.,neutral,0.9061844944953918,False
+I want to return this item.,neutral,0.7306406497955322,True
+I am so disappointed. My order arrived broken.,sad,0.9837861657142639,False
+This is unacceptable. I have been waiting for weeks!,sad,0.9827404022216797,False
+I am not happy with this service.,sad,0.9818485975265503,False
+"Great, another late delivery. Just what I needed.",happy,0.8312669396400452,True
+"The product is good, but the delivery was terrible.",sad,0.9409943222999573,False

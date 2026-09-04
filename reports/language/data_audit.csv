@@ -1,0 +1,4 @@
+split,original_rows,repeated_text_rows,conflicting_label_rows,overlap_with_earlier_splits,unique_unseen_nonconflicting_rows
+train,70000,1029,11,0,68967
+valid,10000,1010,0,132,8877
+test,10000,667,0,188,9171

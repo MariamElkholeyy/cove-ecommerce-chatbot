@@ -1,0 +1,10 @@
+{
+  "source": "User-provided Colab notebook and fitted model",
+  "original_model": "lang_detection_model.pkl",
+  "model_sha256": "3f41047237b82cac8e5c38ff5c50c809356764b8845a08acbab006783c63322e",
+  "original_notebook": "notebooks/reference/Language_Detection_colab_original.ipynb",
+  "training_sklearn_version": "1.6.1",
+  "training_dataset_revision": "not recorded in original notebook",
+  "original_validation_accuracy": 0.9943,
+  "locally_retrained": false
+}

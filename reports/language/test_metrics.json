@@ -1,0 +1,22 @@
+{
+  "model": "user_colab_character_tfidf_logistic_regression",
+  "validation_accuracy": 0.9943,
+  "confidence_threshold": 0.0,
+  "min_letters": 4,
+  "original_test": {
+    "examples": 10000,
+    "accuracy": 0.9939,
+    "macro_f1": 0.9939183822941692,
+    "accepted_examples": 10000,
+    "coverage": 1.0,
+    "accepted_accuracy": 0.9939
+  },
+  "unique_unseen_test": {
+    "examples": 9171,
+    "accuracy": 0.9938937956602334,
+    "macro_f1": 0.9937440245407346,
+    "accepted_examples": 9171,
+    "coverage": 1.0,
+    "accepted_accuracy": 0.9938937956602334
+  }
+}
